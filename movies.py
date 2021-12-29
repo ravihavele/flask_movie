@@ -26,7 +26,7 @@ class Movie(db.Model):
         db.session.commit() # commit changes to session
 
     def get_all_movies():
-        '''function to get all movies from databse'''
+        '''function to get all movies from databse '''
         return [Movie.json(movie) for movie in Movie.query.all()]
 
     def get_movie(_id):
